@@ -7,9 +7,16 @@ public class Name {
 		String names[] = { "Lauren", "Audrina", "Heidi", "Whitney",
 		        "Stephanie", "Spencer", "Lisa", "Brody", "Frankie",
 		        "Holly", "Jordan", "Brian", "Jason" };
-		System.out.print("The original order:");
+		System.out.println("The original order :");
 		for(int i = 0; i < names.length; i++) {
-			//System.out.print(i + ": ")
+			System.out.print(i + ": " + names[i] + " ");
 		}
+		//Remember this method
+		Arrays.sort(names);
+		System.out.println("\nThe new order:");
+		for (int i = 0; i < names.length; i++) {
+			System.out.print(i + ": " + names[i] + " ");
+		}
+		System.out.println();
 	}
 }
