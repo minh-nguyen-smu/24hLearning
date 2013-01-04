@@ -25,5 +25,49 @@ public class LottoMadness extends JFrame {
 	JPanel row4 = new JPanel();
 	JLabel got3Label = new JLabel("3 of 6: ", JLabel.RIGHT);
 	JTextField got3 = new JTextField("0");
+	JLabel got4Label = new JLabel("4 of 6: ", JLabel.RIGHT);
+	JTextField got4 = new JTextField("0");
+	JLabel got5Label = new JLabel("5 of 6: ", JLabel.RIGHT);
+	JTextField got5 = new JTextField("0");
+	JLabel got6Label = new JLabel("6 of 6: ", JLabel.RIGHT);
+	JTextField got6 = new JTextField("0");
+	JLabel drawingsLabel = new JLabel("Drawings: ", JLabel.RIGHT);
+	JTextField drawings = new JTextField("0");
+	JLabel yearsLabel = new JLabel("Years: ", JLabel.RIGHT);
+	JTextField years = new JTextField();
+	
+	public LottoMadness() {
+		super("Lotto Madness");
+		setLookAndFeel();
+		setSize(550, 400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		GridLayout layout = new GridLayout(5, 1, 10, 10);
+		setLayout(layout);
+		
+		FlowLayout layout1 = new FlowLayout(FlowLayout.CENTER, 10, 10);
+		option.add(quickpick);
+		option.add(personal);
+		row1.setLayout(layout1);
+		row1.add(quickpick);
+		row1.add(personal);
+		add(row1);
+		
+		
+		
+		
+		
+		
+		
+	}
+
+	private void setLookAndFeel() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+	
+	
 	
 }
