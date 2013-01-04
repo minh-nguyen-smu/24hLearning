@@ -52,22 +52,64 @@ public class LottoMadness extends JFrame {
 		row1.add(personal);
 		add(row1);
 		
+		GridLayout layout2 = new GridLayout(2, 7, 10, 10);
+		row2.setLayout(layout2);
+		row2.add(numbersLabel);
+		for (int i = 0; i < 6; i++) {
+			numbers[i] = new JTextField();
+			row2.add(numbers[i]);
+		}
+		row2.add(winnersLabel);
+		for (int i = 0; i < 6; i++) {
+			winners[i] = new JTextField();
+			row2.add(winners[i]);
+		}
+		add(row2);
 		
+		FlowLayout layout3 = new FlowLayout(FlowLayout.CENTER, 10, 10);
+		row3.setLayout(layout3);
+		stop.setEnabled(false);
+		row3.add(stop);
+		row3.add(play);
+		row3.add(reset);
+		add(row3);
 		
+		GridLayout layout4 = new GridLayout(2, 3, 20, 10);
+		row4.setLayout(layout4);
+		row4.add(got3Label);
+		got3.setEditable(false);
+		row4.add(got3);
+		row4.add(got4Label);
+		got4.setEditable(false);
+		row4.add(got4);
+		row4.add(got5Label);
+		got5.setEditable(false);
+		row4.add(got5);
+		row4.add(got6Label);
+		got6.setEditable(false);
+		row4.add(got6);
+		row4.add(drawingsLabel);
+		drawings.setEditable(false);
+		row4.add(drawings);
+		row4.add(yearsLabel);
+		years.setEditable(false);
+		row4.add(years);
+		add(row4);
 		
-		
-		
-		
+		setVisible(true);		
 	}
 
 	private void setLookAndFeel() {
-		// TODO Auto-generated method stub
-		
+		try {
+			UIManager.setLookAndFeel(
+					"com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel"
+			);
+		} catch (Exception exc) {
+			//ignore the error
+		}
 	}
 	
-	
-	
-	
-	
-	
+	public static void main(String[] args) {
+		LottoMadness frame = new LottoMadness();
+	}
 }
